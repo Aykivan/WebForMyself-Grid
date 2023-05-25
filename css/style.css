@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700,900&subset=cyrillic");
 * {
   padding: 0;
   margin: 0;
@@ -81,45 +82,35 @@ button, label {
   cursor: pointer;
 }
 
+body {
+  font-family: "Roboto", "Arial", sans-serif;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.container {
+  max-width: 100%;
+  min-width: 320px;
+}
+
+.wrap {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 990px;
+  min-width: 320px;
+}
+
 .visually__hidden {
+  margin: -1px;
+  padding: 0;
   height: 1px;
   width: 1px;
   overflow: hidden;
   position: absolute;
+  border: none;
   clip: rect(1px 1px 1px 1px);
   clip: rect(1px, 1px, 1px, 1px);
   -webkit-clip-path: inset(50%);
           clip-path: inset(50%);
   white-space: nowrap;
-}
-
-body {
-  background-color: #414141;
-  color: #fff;
-}
-
-.container {
-  margin: 0 auto;
-  padding: 100px 15px;
-  max-width: 1130px;
-}
-
-.grid {
-  display: grid;
-  grid-template: repeat(3, 1fr)/repeat(3, 1fr);
-  gap: 20px;
-}
-
-.grid__element {
-  padding: 20px;
-  background-color: rgb(47, 179, 179);
-  border-radius: 10px;
-  border: 1px solid #fff;
-  font-weight: 700;
-  text-align: center;
-}
-
-.grid__element-7 {
-  grid-column: span 2;
-  grid-row: span 2;
 }
