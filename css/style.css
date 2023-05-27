@@ -245,3 +245,177 @@ body {
     grid-template-areas: "img-2 img-1" "img-3 img-1" "img-4 img-4" "img-5 img-5" "img-6 img-6";
   }
 }
+.user__wrap {
+  display: grid;
+  grid-template: 1fr/minmax(290px, 690px) 270px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.user__profile {
+  margin: 25px 0;
+  list-style: none;
+  border-right: 1px solid #d4d4d4;
+}
+.user__button {
+  margin: 0 5px;
+  padding: 12.5px;
+  justify-self: end;
+  border-radius: 5px;
+  background: -webkit-gradient(linear, left top, right top, from(rgb(202, 0, 81)), to(rgb(223, 4, 92)));
+  background: linear-gradient(90deg, rgb(202, 0, 81) 0%, rgb(223, 4, 92) 100%);
+  -webkit-box-shadow: 0 3px 0 rgba(148, 0, 59, 0.8);
+          box-shadow: 0 3px 0 rgba(148, 0, 59, 0.8);
+  font-size: 21px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #fff;
+}
+
+.profile {
+  display: grid;
+  grid-template: 1fr/135px 1fr;
+  grid-gap: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.profile__link {
+  display: block;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.6);
+}
+.profile__link img {
+  padding: 5px;
+  display: block;
+  border-radius: 5px;
+  width: 100%;
+}
+.profile__text {
+  max-width: 420px;
+}
+.profile__text p {
+  margin: 0px 0px 20px 0px;
+  font-size: 13px;
+  color: rgb(127, 127, 127);
+  line-height: 1.2;
+}
+.profile__name {
+  margin: 0px 0px 20px 0px;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1.2;
+  color: rgb(64, 64, 64);
+}
+.profile__btns {
+  display: grid;
+  grid-template: 1fr/repeat(auto-fit, minmax(140px, 1fr));
+  justify-items: start;
+}
+.profile__button {
+  padding: 5px;
+  display: block;
+  border: 1px solid rgb(212, 212, 212);
+  width: 100%;
+  color: rgb(202, 0, 81);
+  font-size: 15px;
+  line-height: 1.2;
+  background-color: rgb(245, 245, 245);
+}
+.profile__button:nth-of-type(2) {
+  margin-left: -1px;
+}
+.profile__button:nth-of-type(3) {
+  margin-left: -2px;
+}
+
+@media (max-width: 680px) {
+  .user__wrap {
+    grid-template-columns: 1fr;
+  }
+  .user__profile {
+    border-right: none;
+  }
+  .user__button {
+    margin-bottom: 25px;
+    justify-self: center;
+  }
+}
+@media (max-width: 480px) {
+  .profile__link {
+    grid-column: 1/-1;
+    justify-self: center;
+  }
+  .profile__text {
+    grid-column: 1/-1;
+    justify-self: center;
+  }
+}
+.gallery {
+  padding: 1px;
+  background: url(../img/layer.jpg) 0 0/cover no-repeat;
+}
+.gallery__block {
+  display: grid;
+  grid-template: auto/repeat(auto-fit, minmax(220px, 1fr));
+  grid-gap: 25px;
+}
+.gallery__date {
+  margin: 30px auto 20px;
+  padding: 5px;
+  text-align: center;
+  width: 170px;
+  font-size: 17px;
+  line-height: 1.2;
+  color: rgb(137, 137, 137);
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  -webkit-box-shadow: 0 1px 3px 0 rgba(6, 6, 6, 0.2);
+          box-shadow: 0 1px 3px 0 rgba(6, 6, 6, 0.2);
+  grid-column: 1/5;
+}
+.gallery__link {
+  display: block;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.6);
+  background-color: #fff;
+}
+.gallery__link img {
+  padding: 5px;
+  border-radius: 5px;
+  width: 100%;
+}
+.gallery__loading {
+  margin: 30px 0 15px;
+  padding-top: 35px;
+  position: relative;
+  text-align: center;
+}
+.gallery__loading-link {
+  font-size: 15px;
+  color: rgb(177, 177, 177);
+  line-height: 1.2;
+}
+.gallery__loading-link::before, .gallery__loading-link::after, .gallery__loading-link span::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(50% - 30px);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #c1c1c1;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.gallery__loading-link::after {
+  left: 50%;
+  background-color: #9b9b9b;
+}
+.gallery__loading-link span::after {
+  left: calc(50% + 30px);
+  background-color: #616161;
+}
